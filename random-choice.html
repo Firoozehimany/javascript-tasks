@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>random choice</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <h1>Random Number</h1>
+        <p>Choice random number between 5500 and 15000</p>
+        <button onclick="chance(5500, 15000)">choice</button>
+        <p id="num-win"></p>
+        <script>
+            function chance (min, max) {
+                var winner = Math.floor(Math.random() * (max - min + 1) ) + min;
+                document.getElementById("num-win").innerHTML = winner;
+                return winner;
+            }
+        </script>
+    </body>
+</html>
