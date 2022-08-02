@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>countdown-timer</title>
+        <meta charset="utf-8"/>
+        <style>
+            body {
+                background: #222;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 200px;
+                text-align: center;
+                margin: 0 auto;
+                padding: 200px;
+                color: #d32f2f;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="showTime"></h1>
+        <script>
+            var timer = 31;
+            var show = document.getElementById("showTime");
+            var countTime = setInterval ("setTime()", 1000);
+            function setTime () {
+                if (timer <= 0) {
+                    clearInterval(countTime)
+                    show.innerHTML = "FINISH"
+                }
+                else {show.innerHTML = timer}
+                timer -= 1
+            }
+        </script>
+    </body>
+</html>
