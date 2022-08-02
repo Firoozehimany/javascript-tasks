@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>long paragraph</title>
+        <style>
+            body {
+                direction: rtl;
+                margin: 0;
+                background: #f5f5f5;
+            }
+
+            .back {
+                width: 60%;
+                color: #222;
+                padding: 60px 120px;
+                line-height: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="back">
+            <h1>مهمونی</h1>
+            <p id="paragraph"></p>
+        </div>
+        <script>
+             function longText() {
+                let text = "در همسایگی خانه جدید آقای طهماسب که به تازگی به آن نقل مکان کرده، یک سالن عروسی قرار دارد. بنابراین شخصیت‌های عروسکی جدیدی که اکثر آن ها کارکنان این سالن عروسی هستند به زندگی او اضافه شده و اتفاق های جذابی را رقم می زنند.";
+                let result = text.slice(0 , 200) + " " + "...";
+                document.getElementById("paragraph").innerHTML = result;
+             }
+
+             longText()
+        </script>
+    </body>
+</html>
