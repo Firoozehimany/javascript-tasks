@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>default</title>
+        <meta charset="utf-8"/>
+        <style>
+            .table-box {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 0 200px
+            }
+            .table-box .box{
+                width: 200px;
+                height: 200px;
+                background: #003153;
+                margin: 20px;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .buttons .button {
+                width: 120px;
+                height: 60;
+                background: #757c88;
+                margin: 20px; 
+                border-radius: 10px;
+                font-size: 20px;
+                color: #fff;
+            }
+
+            .box.color {
+                background: #0067a5;
+            }
+
+            .box.radius {
+                border-radius: 30px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class= "buttons">
+            <button id="color" class="button">color</button>
+            <button id="radius" class="button">radius</button>
+            <button id="back" class="button">back</button>
+
+        </div>
+        <div class="table-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <script>
+            function addcolor(){
+                let color = document.getElementById("color")
+                color.addEventListener("click" , function(){
+                    let elements = document.querySelectorAll(".box")
+                    elements.forEach(function(item){
+                        item.classList.add("color")
+                    })
+                })
+            }
+
+            function addradius(){
+                let radius = document.getElementById("radius")
+                radius.addEventListener("click" , function(){
+                    let elements = document.querySelectorAll(".box")
+                    elements.forEach(function(item){
+                        item.classList.add("radius")
+                    })
+                })
+            }
+
+            function addback(){
+                let back = document.getElementById("back")
+                back.addEventListener("click" , function(){
+                    let elements = document.querySelectorAll(".box")
+                    elements.forEach(function(item){
+                        item.classList.remove("color")
+                        item.classList.remove("radius")
+                    })
+                })
+            }
+
+            addcolor()
+            addradius()
+            addback()
+
+        </script>
+    </body>
+</html>
