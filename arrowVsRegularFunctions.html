@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>arrow vs regular functions</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <script>
+            let person = {
+                firstName: "firoozeh",
+                lastName: "imany",
+                age: 38,
+                getFullName: function() {
+                    return `${this.name} ${this.lastName}`
+                },
+                newGetFullName: () => `${person.name} ${person.lastName}`
+            }
+
+            console.log(person.getFullName())
+            console.log(person.newGetFullName())
+        </script>
+    </body>
+</html>
